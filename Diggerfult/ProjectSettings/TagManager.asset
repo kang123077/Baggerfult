@@ -14,8 +14,8 @@ TagManager:
   - BlockField
   - ActionBlock
   - ObstacleBlock
-  - 
-  - 
+  - Bullet
+  - ExitField
   - 
   - 
   - 

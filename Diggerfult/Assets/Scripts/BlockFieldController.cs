@@ -16,6 +16,8 @@ public class BlockFieldController : MonoBehaviour
         ShootingCheck();
     }
 
+    // TODO : 시퀀스 관리도 포함되어야 함
+
     public void ShootingCheck()
     {
         if (Input.GetMouseButtonDown(0))
@@ -33,6 +35,7 @@ public class BlockFieldController : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && isDragging)
         {
             endPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (endPoint == startPoint) return;
             isDragging = false;
             // TODO : 오브젝트 풀 요청시 Bullet 종류에 따랄 제네릭 활용 여부 고려
             ObjectPool.inst.GetObject<ProtoBullet>(protoBulletPrefab, transform)

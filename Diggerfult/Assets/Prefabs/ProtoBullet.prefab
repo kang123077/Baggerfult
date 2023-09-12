@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3412142690409776848}
   - component: {fileID: 5957593211670105772}
   - component: {fileID: 2039977199323225460}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ProtoBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1921670535
-  m_SortingLayer: 1
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -136,8 +136,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -147,7 +147,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &2039977199323225460
 MonoBehaviour:
@@ -161,3 +161,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbaadf3e07f4dc849ba76be8f49ac0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  exitMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  fieldMask:
+    serializedVersion: 2
+    m_Bits: 64
+  actionMask:
+    serializedVersion: 2
+    m_Bits: 128
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
