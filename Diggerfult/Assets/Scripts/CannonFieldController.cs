@@ -49,7 +49,10 @@ public class CannonFieldController : MonoBehaviour
 
                 hit = Physics2D.Raycast(endPoint, Vector2.zero);
                 // 무언가 hit했고, Block필드면
-                if (hit.collider != null && hit.collider.gameObject.GetComponent<BlockFieldController>() != null)
+                if (hit.collider != null &&
+                    (hit.collider.gameObject.layer == StaticLayerMask.ObstacleBlock ||
+                    hit.collider.gameObject.layer == StaticLayerMask.ActionBlock ||
+                    hit.collider.gameObject.layer == StaticLayerMask.BlockField))
                 {
                     // TODO : 오브젝트 풀 요청시 Bullet 종류에 따랄 제네릭 활용 여부 고려
                     ObjectPool.inst.GetObject<ProtoBullet>(protoBulletPrefab, transform)
