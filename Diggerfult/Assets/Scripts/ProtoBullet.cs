@@ -28,7 +28,6 @@ public class ProtoBullet : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("OnCollisionEnter2D");
         if ((1 << collision.gameObject.layer & exitMask) != 0)
         {
             ObjectPool.inst.ReleaseObject<ProtoBullet>(this.gameObject);
